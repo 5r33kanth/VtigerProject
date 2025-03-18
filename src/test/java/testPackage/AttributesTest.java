@@ -37,5 +37,13 @@ public class AttributesTest extends BaseClass{
 		
 		
 	}
+	
+	@Test( /*priority = 1,  description = "Usability scenario" enabled = false dependsOnMethods ="moveToLeadspage" */ groups = "smoke")
+	public void moveToContacts1() {
+		hp.clickContactsLink();
+		System.out.println("Contacts page pass-smoke3");
+		
+		
+	}
 
 }
