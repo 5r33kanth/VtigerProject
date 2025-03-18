@@ -1,0 +1,460 @@
+<html>
+<head>
+<title>TestNG:  mainTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>mainTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Mar 15 14:23:56 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>277 seconds (277773 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testPackage.OrganizationTest.logout()'><b>logout</b><br>Test class: testPackage.OrganizationTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.linkText: Sign Out
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.click(Unknown Source)
+	at objectRepository.HomePage.signOut(HomePage.java:57)
+	at utilities.BaseClass.logout(BaseClass.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1871366357", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1871366357'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.linkText: Sign Out
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.click(Unknown Source)
+	at objectRepository.HomePage.signOut(HomePage.java:57)
+	at utilities.BaseClass.logout(BaseClass.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>testPackage.OrganizationTest@7a6d7e92</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testPackage.ContactTest.createContact()'><b>createContact</b><br>Test class: testPackage.ContactTest<br/>
+<a href="#Output-1282611542" onClick='toggleBox("Output-1282611542", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1282611542" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1282611542">
+createContact testcase execution started<br/>
+createContact testcase failed<br/>
+java.lang.AssertionError: null<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: null
+	at testPackage.ContactTest.createContact(ContactTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1282611542", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1282611542'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.fail(Assert.java:116)
+	at testPackage.ContactTest.createContact(ContactTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>21</td>
+<td>testPackage.ContactTest@491b9b8</td></tr>
+<tr>
+<td title='testPackage.ContactTest.createContact()'><b>createContact</b><br>Test class: testPackage.ContactTest<br/>
+<a href="#Output-2134194703" onClick='toggleBox("Output-2134194703", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2134194703" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2134194703">
+createContact testcase execution started<br/>
+createContact testcase failed<br/>
+java.lang.AssertionError: null<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: null
+	at testPackage.ContactTest.createContact(ContactTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2134194703", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2134194703'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.fail(Assert.java:116)
+	at testPackage.ContactTest.createContact(ContactTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>21</td>
+<td>testPackage.ContactTest@491b9b8</td></tr>
+<tr>
+<td title='testPackage.ContactTest.createContact()'><b>createContact</b><br>Test class: testPackage.ContactTest<br/>
+<a href="#Output-1555928242" onClick='toggleBox("Output-1555928242", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1555928242" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1555928242">
+createContact testcase execution started<br/>
+createContact testcase failed<br/>
+java.lang.AssertionError: null<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: null
+	at testPackage.ContactTest.createContact(ContactTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1555928242", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1555928242'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.fail(Assert.java:116)
+	at testPackage.ContactTest.createContact(ContactTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>20</td>
+<td>testPackage.ContactTest@491b9b8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testPackage.DataSupply.printData()'><b>printData</b><br>Test class: testPackage.DataSupply<br>Parameters: hari@gmail.com, hari@123<br/>
+<a href="#Output-894024873" onClick='toggleBox("Output-894024873", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-894024873" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-894024873">
+printData testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testPackage.DataSupply@7a5ceedd</td></tr>
+<tr>
+<td title='testPackage.DataSupply.printData()'><b>printData</b><br>Test class: testPackage.DataSupply<br>Parameters: pious@gmail.com, pious@123<br/>
+<a href="#Output-461591680" onClick='toggleBox("Output-461591680", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-461591680" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-461591680">
+printData testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testPackage.DataSupply@7a5ceedd</td></tr>
+<tr>
+<td title='testPackage.DataSupply.printData()'><b>printData</b><br>Test class: testPackage.DataSupply<br>Parameters: sneha@gmail.com, sneha@123<br/>
+<a href="#Output-692743054" onClick='toggleBox("Output-692743054", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-692743054" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-692743054">
+printData testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testPackage.DataSupply@7a5ceedd</td></tr>
+<tr>
+<td title='testPackage.OrganizationTest.createOrganization()'><b>createOrganization</b><br>Test class: testPackage.OrganizationTest<br/>
+<a href="#Output-1567310543" onClick='toggleBox("Output-1567310543", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1567310543" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1567310543">
+createOrganization testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>testPackage.OrganizationTest@7a6d7e92</td></tr>
+<tr>
+<td title='testPackage.LeadsTest.createLead()'><b>createLead</b><br>Test class: testPackage.LeadsTest<br/>
+<a href="#Output-862146308" onClick='toggleBox("Output-862146308", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-862146308" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-862146308">
+createLead testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>testPackage.LeadsTest@6e535154</td></tr>
+<tr>
+<td title='testPackage.DataSupply1.contactDetails()'><b>contactDetails</b><br>Test class: testPackage.DataSupply1<br>Parameters: Ms., Black, Widow, Employee, Student, Ee, blackwidow@gmail.com, 7896354780<br/>
+<a href="#Output-1869247587" onClick='toggleBox("Output-1869247587", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1869247587" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1869247587">
+contactDetails testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testPackage.DataSupply1@5f8e8a9d</td></tr>
+<tr>
+<td title='testPackage.DataSupply2Test.createContact()'><b>createContact</b><br>Test class: testPackage.DataSupply2Test<br>Parameters: Mr., BatMan, K, Employee, Health Inspector, health, batman@gmail.com, 7878547898<br/>
+<a href="#Output-1407009494" onClick='toggleBox("Output-1407009494", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1407009494" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1407009494">
+createContact testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>testPackage.DataSupply2Test@1a4927d6</td></tr>
+<tr>
+<td title='testPackage.DataSupply.printData()'><b>printData</b><br>Test class: testPackage.DataSupply<br>Parameters: helen@gmail.com, helen@123<br/>
+<a href="#Output-1260217713" onClick='toggleBox("Output-1260217713", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1260217713" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1260217713">
+printData testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testPackage.DataSupply@7a5ceedd</td></tr>
+<tr>
+<td title='testPackage.DataSupply1.contactDetails()'><b>contactDetails</b><br>Test class: testPackage.DataSupply1<br>Parameters: Mr., Spider, Man, Employee, Student, EC, spiderman@gmail.com, 7896354789<br/>
+<a href="#Output-724028528" onClick='toggleBox("Output-724028528", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-724028528" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-724028528">
+contactDetails testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testPackage.DataSupply1@5f8e8a9d</td></tr>
+<tr>
+<td title='testPackage.DataSupply2Test.createContact()'><b>createContact</b><br>Test class: testPackage.DataSupply2Test<br>Parameters: Ms., Wonder, Women, Self Generated, Student, DC, wonder@gmail.com, 8854698752<br/>
+<a href="#Output-165875610" onClick='toggleBox("Output-165875610", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-165875610" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-165875610">
+createContact testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>testPackage.DataSupply2Test@1a4927d6</td></tr>
+<tr>
+<td title='testPackage.DataSupply1.contactDetails()'><b>contactDetails</b><br>Test class: testPackage.DataSupply1<br>Parameters: Mr., Iron, Man, Employee, Mechanic, EEE, ironman@gmail.com, 7896554789<br/>
+<a href="#Output-485475507" onClick='toggleBox("Output-485475507", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-485475507" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-485475507">
+contactDetails testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testPackage.DataSupply1@5f8e8a9d</td></tr>
+<tr>
+<td title='testPackage.DataSupply2Test.createContact()'><b>createContact</b><br>Test class: testPackage.DataSupply2Test<br>Parameters: Mr., SuperMan, Raj, Partner, Journalist, EEE, superman@gmail.com, 2224778965<br/>
+<a href="#Output-540537131" onClick='toggleBox("Output-540537131", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-540537131" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-540537131">
+createContact testcase execution started<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>testPackage.DataSupply2Test@1a4927d6</td></tr>
+</table><p>
+</body>
+</html>
